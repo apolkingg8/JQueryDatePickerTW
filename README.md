@@ -1,10 +1,14 @@
-JQueryDatePickerTW
+JQuery日曆民國版
 ==================
 
-JQuery日曆民國版
+###目前尚未完成
 
-##用法
+###用法
 
-$(DOM).datepickerTW(option);
+`$(DOM).datepickerTW(option);`
 
-option及api皆和原本的datepicker相同，參考http://api.jqueryui.com/datepicker/
+options及methods皆和原本的datepicker相同，參考http://api.jqueryui.com/datepicker/
+
+###待解決
+
+calender上應顯示民國年
