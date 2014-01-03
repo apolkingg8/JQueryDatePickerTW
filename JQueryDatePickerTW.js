@@ -11,6 +11,7 @@
             dateNative.getDate()
         );
 
+    // 應該有更好的做法
     var funcColle = {
         onSelect: {
             basic: function(dateText, inst){
@@ -29,6 +30,15 @@
                 if($('.ui-datepicker-year').text().indexOf('民國') < 0){
                     //$('.ui-datepicker-year').text('民國' + dateTW.getFullYear());
                 }
+            }
+        },
+        beforeShow: {
+            basic: function(input, inst){
+                if($(input).val() !== ''){
+                    $(input).datepicker('setDate', dateNative);
+                    $(input).val($.datepicker.formatDate(twSettings.dateFormat, dateTW));
+                }
+                //$('.ui-datepicker-year').text('民國' + dateTW.getFullYear());
             }
         }
     };
@@ -51,6 +61,8 @@
         isRTL: false,
         showMonthAfterYear: true,
         yearSuffix: '年',
+
+        // 應該有更好的做法
         onSelect: function(dateText, inst){
             $(this).val(funcColle.onSelect.basic(dateText, inst));
             if(typeof funcColle.onSelect.newFunc === 'function'){
@@ -58,9 +70,15 @@
             }
         },
         onChangeMonthYear: function(dateText, inst){
-            $(this).val(funcColle.onChangeMonthYear.basic(dateText, inst));
+            funcColle.onChangeMonthYear.basic(dateText, inst);
             if(typeof funcColle.onChangeMonthYear.newFunc === 'function'){
                 funcColle.onChangeMonthYear.newFunc(dateText, inst);
+            }
+        },
+        beforeShow: function(input, inst){
+            funcColle.beforeShow.basic(input, inst);
+            if(typeof funcColle.beforeShow.newFunc === 'function'){
+                funcColle.beforeShow.newFunc(input, inst);
             }
         }
     };
@@ -70,7 +88,8 @@
 
         // setting on init,
         if(typeof options === 'object'){
-            //onSelect跟onChangeMonthYear例外處理, 避免覆蓋
+            // 部分事件例外處理, 避免覆蓋
+            // 應該有更好的做法
             if(typeof options.onSelect === 'function'){
                 funcColle.onSelect.newFunc = options.onSelect;
                 options.onSelect = twSettings.onSelect;
@@ -78,6 +97,10 @@
             if(typeof options.onChangeMonthYear === 'function'){
                 funcColle.onChangeMonthYear.newFunc = options.onChangeMonthYear;
                 options.onChangeMonthYear = twSettings.onChangeMonthYear;
+            }
+            if(typeof options.beforeShow === 'function'){
+                funcColle.beforeShow.newFunc = options.beforeShow;
+                options.beforeShow = twSettings.beforeShow;
             }
         }
 
@@ -96,15 +119,6 @@
 
         // init
         $(this).datepicker(twSettings);
-
-        // 要先修成西元年
-        $(this).click(function(){
-            if($(this).val() !== ''){
-                $(this).datepicker('setDate', dateNative);
-                $(this).val($.datepicker.formatDate(twSettings.dateFormat, dateTW));
-            }
-            //$('.ui-datepicker-year').text('民國' + dateTW.getFullYear());
-        });
 
         return this;
     };
