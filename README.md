@@ -11,4 +11,4 @@ options及methods皆和原本的datepicker相同，參考http://api.jqueryui.com
 
 ###待解決
 
-select year尚未修改
+不支援民國前

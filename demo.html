@@ -16,7 +16,12 @@
     </label>
 
     <script type="text/javascript">
-        $('.datepickerTW').datepickerTW();
+        $('.datepickerTW').datepickerTW({
+            changeYear: true,
+            changeMonth: true,
+            yearRange: '90:102',
+            dateFormat: 'yy-m-d'
+        });
         $('.datepicker').datepicker();
     </script>
 </body>
