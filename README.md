@@ -43,7 +43,12 @@ jQuery DatepickerTW
 
 api使用方法皆與datepicker相同，參考http://api.jqueryui.com/datepicker/
 
-`yearRange`使用民國或西元皆可
+`yearRange`使用民國或西元皆可(會把小於1911的年份都視為民國年)
+```js
+$('.datepickerTW').datepickerTW({
+    yearRange: '98:2003' // 民國98年到102年
+});
+```
 
 目前不支援民國前
 
