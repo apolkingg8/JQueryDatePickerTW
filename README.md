@@ -55,7 +55,11 @@ $('.datepickerTW').datepickerTW({
 
 ## 反饋
 
-如果有發現任何的問題，請[Mail](apolkingg8@gmail.com)給我，或是在[Blog上留言](http://apolkingg8.logdown.com/posts/173178-jquerydatepicker-republic-of-china)
+如果有發現任何的問題，請Mail給我，或是在Blog上留言
+
+Mail: apolkingg8@gmail.com
+
+Blog: [http://apolkingg8.logdown.com/posts/173178-jquerydatepicker-republic-of-china](http://apolkingg8.logdown.com/posts/173178-jquerydatepicker-republic-of-china)
 
 ## 更新日誌
 
