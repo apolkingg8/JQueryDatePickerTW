@@ -40,7 +40,7 @@ jQuery DatepickerTW
 </script>
 ```
 
-### API Document
+## API Document
 
 api使用方法皆與datepicker相同，參考http://api.jqueryui.com/datepicker/
 
