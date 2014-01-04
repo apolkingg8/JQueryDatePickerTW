@@ -69,7 +69,6 @@
             if(typeof funcColle.onSelect.newFunc === 'function'){
                 funcColle.onSelect.newFunc(dateText, inst);
             }
-            console.log(inst);
         }
     };
 

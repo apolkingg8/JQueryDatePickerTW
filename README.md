@@ -1,7 +1,7 @@
 jQuery DatepickerTW
 ================================
 
-基於jQueryUI的完整民國版datepicker套件
+基於jQueryUI的民國版datepicker套件
 
 ## 開始使用
 
