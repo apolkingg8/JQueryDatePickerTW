@@ -3,7 +3,7 @@ jQuery DatepickerTW
 
 基於jQueryUI的民國版datepicker套件
 
-## 開始使用
+## Getting Started
 
 ### 相依檔案
 
@@ -53,15 +53,15 @@ $('.datepickerTW').datepickerTW({
 
 目前不支援民國前
 
-## 反饋
+## Reporting an Issue
 
 如果有發現任何的問題，請Mail給我，或是在Blog上留言
 
 Mail: apolkingg8@gmail.com
 
-Blog: [http://apolkingg8.logdown.com/posts/173178-jquerydatepicker-republic-of-china](http://apolkingg8.logdown.com/posts/173178-jquerydatepicker-republic-of-china)
+Blog: [BlogPost - jQueryDatePicker民國版](http://apolkingg8.logdown.com/posts/173178-jquerydatepicker-republic-of-china)
 
-## 更新日誌
+## Update Notes
 
 2014-01-04 release 1.0
 
