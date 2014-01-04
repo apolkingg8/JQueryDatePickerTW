@@ -4,7 +4,6 @@
     <list default="true" id="6a42fc4f-fa43-4c39-b22b-8c5991777987" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JQueryDatePickerTW.js" afterPath="$PROJECT_DIR$/JQueryDatePickerTW.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.html" afterPath="$PROJECT_DIR$/demo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JQueryCalenderTW.iws" />
@@ -30,19 +29,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="JQueryDatePickerTW.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="JQueryDatePickerTW.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="67" column="9" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.6395349" vertical-offset="924" max-vertical-offset="2706">
+                <state line="115" column="58" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.0" vertical-offset="1846" max-vertical-offset="2882">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="44" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+                <state line="13" column="15" selection-start="177" selection-end="177" vertical-scroll-proportion="0.33255813" vertical-offset="0" max-vertical-offset="860">
                   <folding />
                 </state>
               </provider>
@@ -51,7 +50,7 @@
           <file leaf-file-name="jquery-1.9.1.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Lib/jquery-1.9.1.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="317" column="0" selection-start="8451" selection-end="8451" vertical-scroll-proportion="0.0" vertical-offset="6428" max-vertical-offset="211002">
+                <state line="317" column="0" selection-start="8451" selection-end="8451" vertical-scroll-proportion="0.0" vertical-offset="6974" max-vertical-offset="211266">
                   <folding />
                 </state>
               </provider>
@@ -92,8 +91,8 @@
       <list>
         <option value="$PROJECT_DIR$/JQueryCalenderTW.js" />
         <option value="$PROJECT_DIR$/demo.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/JQueryDatePickerTW.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -159,8 +158,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -168,6 +167,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -178,23 +185,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -252,6 +251,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Lib/jquery-1.9.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="317" column="0" selection-start="8451" selection-end="8451" vertical-scroll-proportion="0.0" vertical-offset="6974" max-vertical-offset="211266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="20" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="418">
@@ -309,13 +315,7 @@
     <entry file="file://$PROJECT_DIR$/Lib/jquery-ui-1.10.3.custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8829" column="0" selection-start="278879" selection-end="278879" vertical-scroll-proportion="1.0342385" vertical-offset="193296" max-vertical-offset="329428">
-          <folding>
-            <marker date="1387901338000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1387901338000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1387901338000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1387901338000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1387901338000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -328,9 +328,7 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="15" selection-start="3450" selection-end="3450" vertical-scroll-proportion="0.33255813" vertical-offset="4356" max-vertical-offset="20218">
-          <folding />
-        </state>
+        <state line="211" column="15" selection-start="3450" selection-end="3450" vertical-scroll-proportion="0.33255813" vertical-offset="4356" max-vertical-offset="20218" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lib/jquery-1.9.1.js">
@@ -347,16 +345,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+        <state line="115" column="58" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.0" vertical-offset="1846" max-vertical-offset="2882">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="9" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.6395349" vertical-offset="924" max-vertical-offset="2706">
+        <state line="13" column="15" selection-start="177" selection-end="177" vertical-scroll-proportion="0.33255813" vertical-offset="0" max-vertical-offset="860">
           <folding />
         </state>
       </provider>

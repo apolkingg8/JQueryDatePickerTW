@@ -31,7 +31,7 @@
                 if($('.ui-datepicker-year').text().indexOf('民國') < 0){
                     $('.ui-datepicker-year').text('民國' + dateTW.getFullYear());
                 }*/
-                console.log($('.ui-datepicker-year').text());
+
             }
         }
     };
@@ -107,6 +107,14 @@
                 $(this).val($.datepicker.formatDate(twSettings.dateFormat, dateTW));
             }
             $('.ui-datepicker-year').text('民國' + dateTW.getFullYear());
+        });
+
+        $(this).focus(function(){
+            var $yearSpan = $('.ui-datepicker-year');
+
+            if($yearSpan.text().indexOf('民國') < 0){
+                $yearSpan.text('民國' + dateTW.getFullYear());
+            }
         });
 
         return this;

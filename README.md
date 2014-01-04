@@ -11,5 +11,4 @@ options及methods皆和原本的datepicker相同，參考http://api.jqueryui.com
 
 ###待解決
 
-calender上的民國年換月後會掉, onChangeMonthYear是發生在change之前
-select year顯示西元(同樣, 需要afterChangeMonthYear事件)
+select year尚未修改
