@@ -27,9 +27,10 @@
     var funcColle = {
         onSelect: {
             basic: function(dateText, inst){
+                /*
                 var yearNative = inst.selectedYear < 1911
-                    ? inst.selectedYear + 1911 : inst.selectedYear;
-                dateNative = new Date(yearNative, inst.selectedMonth, inst.selectedDay);
+                    ? inst.selectedYear + 1911 : inst.selectedYear;*/
+                dateNative = new Date(inst.selectedYear, inst.selectedMonth, inst.selectedDay);
 
                 // 年分小於100會被補成19**, 要做例外處理
                 var yearTW = inst.selectedYear > 1911
@@ -84,7 +85,9 @@
             $yearText.text('民國' + dateTW.getFullYear());
         }else{
             // 下拉選單
-            $yearText.before("<span>民國</span>");
+            if($yearText.prev('span').length === 0){
+                $yearText.before("<span>民國</span>");
+            }
             $yearText.children().each(function(){
                 if(parseInt($(this).text()) > 1911){
                     $(this).text(parseInt($(this).text()) - 1911);
@@ -135,7 +138,7 @@
         // init
         $(this).datepicker(twSettings);
 
-        // 修成西元年
+        // beforeRender
         $(this).click(function(){
 
             var isFirstTime = ($(this).val() === '');
@@ -154,6 +157,7 @@
             }
         });
 
+        // afterRender
         $(this).focus(function(){
             replaceYearText();
         });
