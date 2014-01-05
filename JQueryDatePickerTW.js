@@ -13,6 +13,16 @@
             dateNative.getDate()
         );
 
+    // 補0函式
+    var padLeft = function(str, len){
+        if(str.length >= len){
+            return str;
+        }else{
+            return padLeft(("0" + str), len);
+        }
+    }
+
+
     // 應該有更好的做法
     var funcColle = {
         onSelect: {
@@ -23,16 +33,10 @@
 
                 // 年分小於100會被補成19**, 要做例外處理
                 var yearTW = inst.selectedYear > 1911
-                    ? (inst.selectedYear - 1911) < 100
-                        ? '00' + (inst.selectedYear - 1911)
-                        : (inst.selectedYear - 1911) < 999
-                            ? '0' + (inst.selectedYear - 1911)
-                            : inst.selectedYear - 1911
+                    ? padLeft(inst.selectedYear - 1911, 4)
                     : inst.selectedYear;
-                var monthTW = inst.selectedMonth + 1 < 10
-                    ? '0' + (inst.selectedMonth + 1) : inst.selectedMonth + 1;
-                var dayTW = inst.selectedDay < 10
-                    ? '0' + inst.selectedDay : inst.selectedDay;
+                var monthTW = padLeft(inst.selectedMonth + 1, 2);
+                var dayTW = padLeft(inst.selectedDay, 2);
 
                 dateTW = new Date(
                     yearTW + '-' +
@@ -79,6 +83,8 @@
         if(twSettings.changeYear !== true){
             $yearText.text('民國' + dateTW.getFullYear());
         }else{
+            // 下拉選單
+            $yearText.before("<span>民國</span>");
             $yearText.children().each(function(){
                 if(parseInt($(this).text()) > 1911){
                     $(this).text(parseInt($(this).text()) - 1911);
@@ -97,13 +103,18 @@
                 funcColle.onSelect.newFunc = options.onSelect;
                 options.onSelect = twSettings.onSelect;
             }
-            // year range正規化成西元
+            // year range正規化成西元, 小於1911的數字都會被當成民國年
             if(options.yearRange){
                 var temp = options.yearRange.split(':');
                 for(var i = 0; i < temp.length; i += 1){
-                    temp[i] = parseInt(temp[i]) < 1911
-                        ? parseInt(temp[i]) + 1911
-                        : temp[i];
+                    //民國前處理
+                    if(parseInt(temp[i]) < 1 ){
+                        temp[i] = parseInt(temp[i]) + 1911;
+                    }else{
+                        temp[i] = parseInt(temp[i]) < 1911
+                            ? parseInt(temp[i]) + 1911
+                            : temp[i];
+                    }
                 }
                 options.yearRange = temp[0] + ':' + temp[1];
             }

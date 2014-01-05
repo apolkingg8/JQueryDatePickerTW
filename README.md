@@ -51,7 +51,7 @@ $('.datepickerTW').datepickerTW({
 });
 ```
 
-目前不支援民國前
+在option中可使用負數代表民國前，ui及text上會把民國前的年份轉為西元顯示
 
 ## Reporting an Issue
 
@@ -63,6 +63,7 @@ Blog: [BlogPost - jQueryDatePicker民國版](http://apolkingg8.logdown.com/posts
 
 ## Update Notes
 
+2014-01-05 更新民國前，修正單位數年份bug
 2014-01-04 release 1.0
 
 ## License
