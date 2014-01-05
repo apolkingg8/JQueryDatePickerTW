@@ -85,8 +85,8 @@
             $yearText.text('民國' + dateTW.getFullYear());
         }else{
             // 下拉選單
-            if($yearText.prev('span').length === 0){
-                $yearText.before("<span>民國</span>");
+            if($yearText.prev('span.datepickerTW-yearPrefix').length === 0){
+                $yearText.before("<span class='datepickerTW-yearPrefix'>民國</span>");
             }
             $yearText.children().each(function(){
                 if(parseInt($(this).text()) > 1911){
