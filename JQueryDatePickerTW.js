@@ -20,7 +20,7 @@
         }else{
             return padLeft(("0" + str), len);
         }
-    }
+    };
 
 
     // 應該有更好的做法
@@ -96,7 +96,6 @@
         }
     };
 
-
     $.fn.datepickerTW = function(options){
 
         // setting on init,
@@ -140,14 +139,31 @@
 
         // beforeRender
         $(this).click(function(){
-
             var isFirstTime = ($(this).val() === '');
 
-            // 當有year range時, 初始化設成range的最末年
-            if(twSettings.yearRange && isFirstTime){
-                dateNative.setFullYear(twSettings.yearRange.split(':')[1]);
+            // year range and default date
+            if((twSettings.defaultDate || twSettings.yearRange) && isFirstTime){
+
+                if(twSettings.defaultDate){
+                    $(this).datepicker('setDate', twSettings.defaultDate);
+                }
+
+                // 當有year range時, select初始化設成range的最末年
+                if(twSettings.yearRange){
+                    var $yearSelect = $('.ui-datepicker-year'),
+                        nowYear = twSettings.defaultDate
+                            ? $(this).datepicker('getDate').getFullYear()
+                            : dateNative.getFullYear();
+
+                    $yearSelect.children(':selected').removeAttr('selected');
+                    if($yearSelect.children('[value=' + nowYear + ']').length > 0){
+                        $yearSelect.children('[value=' + nowYear + ']').attr('selected', 'selected');
+                    }else{
+                        $yearSelect.children().last().attr('selected', 'selected');
+                    }
+                }
             }
-            $(this).datepicker('setDate', dateNative);
+
             $(this).val($.datepicker.formatDate(twSettings.dateFormat, dateTW));
 
             replaceYearText();

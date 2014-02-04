@@ -19,13 +19,16 @@
         $('.datepickerTW').datepickerTW({
             changeYear: true,
             changeMonth: true,
-            yearRange: '-10:1997',
-            dateFormat: 'yy-mm-dd'
+            //yearRange: '-10:1997',
+            dateFormat: 'yy-mm-dd',
+            defaultDate: +1
         });
         $('.datepicker').datepicker({
             changeYear: true,
             changeMonth: true,
-            yearRange: '-1:100'
+            dateFormat: 'yy-mm-dd',
+            yearRange: '1911:2000',
+            defaultDate: '1995-01-01'
         });
     </script>
 </body>
