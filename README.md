@@ -63,11 +63,10 @@ Blog: [BlogPost - jQueryDatePicker民國版](http://apolkingg8.logdown.com/posts
 
 ## Update Notes
 
-2014-01-05 修正yearPrefix跟selectBox的bug
-
-2014-01-05 更新民國前，修正單位數年份bug
-
-2014-01-04 release 1.0
+2014-02-04 修正defaultDate被yearRange蓋掉的問題（thanks leejulee） 
+2014-01-05 修正yearPrefix跟selectBox的bug　　
+2014-01-05 更新民國前，修正單位數年份bug　　
+2014-01-04 release 1.0　　
 
 ## License
 
