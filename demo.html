@@ -9,19 +9,19 @@
 </head>
 <body>
     <label>
-        <input type="text" class="datepickerTW" value="103-02-05">
+        <input type="text" class="datepickerTW">
     </label>
     <label>
-        <input type="text" class="datepicker" value="2011-11-01">
+        <input type="text" class="datepicker">
     </label>
 
     <script type="text/javascript">
         $('.datepickerTW').datepickerTW({
             changeYear: true,
             changeMonth: true,
-            //yearRange: '-10:1997',
-            dateFormat: 'yy-mm-dd'
-            //defaultDate: '+1w'
+            yearRange: '-10:1997',
+            dateFormat: 'yy-mm-dd',
+            defaultDate: '+1w'
         });
         $('.datepicker').datepicker({
             changeYear: true,

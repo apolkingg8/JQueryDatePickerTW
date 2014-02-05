@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a42fc4f-fa43-4c39-b22b-8c5991777987" name="Default" comment="fix default date">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JQueryDatePickerTW.js" afterPath="$PROJECT_DIR$/JQueryDatePickerTW.js" />
+    <list default="true" id="6a42fc4f-fa43-4c39-b22b-8c5991777987" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.html" afterPath="$PROJECT_DIR$/demo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,10 +28,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="JQueryDatePickerTW.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="JQueryDatePickerTW.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="148" column="12" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.38372093" vertical-offset="2926" max-vertical-offset="4378">
+                <state line="161" column="0" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.7162791" vertical-offset="2926" max-vertical-offset="4378">
                   <folding />
                 </state>
               </provider>
@@ -69,10 +68,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="demo.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/demo.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="34" selection-start="706" selection-end="706" vertical-scroll-proportion="0.5536791" vertical-offset="25" max-vertical-offset="880">
+                <state line="22" column="35" selection-start="668" selection-end="668" vertical-scroll-proportion="0.5536791" vertical-offset="25" max-vertical-offset="880">
                   <folding />
                 </state>
               </provider>
@@ -100,8 +99,8 @@
       <list>
         <option value="$PROJECT_DIR$/JQueryCalenderTW.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/JQueryDatePickerTW.js" />
+        <option value="$PROJECT_DIR$/demo.html" />
       </list>
     </option>
   </component>
@@ -215,13 +214,18 @@
       <created>1391527991993</created>
       <updated>1391527991993</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix some NaN bug">
+      <created>1391619667526</created>
+      <updated>1391619667526</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -236,7 +240,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -250,7 +253,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="fix default date" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix default date" />
+    <MESSAGE value="fix some NaN bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some NaN bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -346,16 +350,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo.html">
+    <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="706" selection-end="706" vertical-scroll-proportion="0.5536791" vertical-offset="25" max-vertical-offset="880">
+        <state line="161" column="0" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.7162791" vertical-offset="2926" max-vertical-offset="4378">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
+    <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="12" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.38372093" vertical-offset="2926" max-vertical-offset="4378">
+        <state line="22" column="35" selection-start="668" selection-end="668" vertical-scroll-proportion="0.5536791" vertical-offset="25" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
