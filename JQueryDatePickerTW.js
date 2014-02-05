@@ -120,6 +120,10 @@
                 }
                 options.yearRange = temp[0] + ':' + temp[1];
             }
+            // if input val not empty
+            if($(this).val() !== ''){
+                options.defaultDate = $(this).val();
+            }
         }
 
         // setting after init
@@ -142,6 +146,7 @@
             var isFirstTime = ($(this).val() === '');
 
             // year range and default date
+
             if((twSettings.defaultDate || twSettings.yearRange) && isFirstTime){
 
                 if(twSettings.defaultDate){
@@ -162,6 +167,8 @@
                         $yearSelect.children().last().attr('selected', 'selected');
                     }
                 }
+            } else {
+                $(this).datepicker('setDate', dateNative);
             }
 
             $(this).val($.datepicker.formatDate(twSettings.dateFormat, dateTW));

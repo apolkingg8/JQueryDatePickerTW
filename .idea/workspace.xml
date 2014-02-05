@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a42fc4f-fa43-4c39-b22b-8c5991777987" name="Default" comment="">
+    <list default="true" id="6a42fc4f-fa43-4c39-b22b-8c5991777987" name="Default" comment="fix default date">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JQueryDatePickerTW.js" afterPath="$PROJECT_DIR$/JQueryDatePickerTW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.html" afterPath="$PROJECT_DIR$/demo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,7 +32,7 @@
           <file leaf-file-name="JQueryDatePickerTW.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="137" column="8" selection-start="4341" selection-end="4341" vertical-scroll-proportion="0.33215547" vertical-offset="2826" max-vertical-offset="4224">
+                <state line="148" column="12" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.38372093" vertical-offset="2926" max-vertical-offset="4378">
                   <folding />
                 </state>
               </provider>
@@ -42,7 +41,7 @@
           <file leaf-file-name="jquery-ui-1.10.3.custom.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../JSLibs/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8239" column="24" selection-start="253850" selection-end="253850" vertical-scroll-proportion="9.266666" vertical-offset="181470" max-vertical-offset="329428">
+                <state line="7866" column="4" selection-start="242842" selection-end="242842" vertical-scroll-proportion="0.0" vertical-offset="172704" max-vertical-offset="329428">
                   <folding />
                 </state>
               </provider>
@@ -51,7 +50,7 @@
           <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="68" column="0" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="1782">
+                <state line="61" column="0" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0" vertical-offset="880" max-vertical-offset="1760">
                   <folding />
                 </state>
               </provider>
@@ -73,7 +72,7 @@
           <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/demo.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="23" column="27" selection-start="698" selection-end="698" vertical-scroll-proportion="0.9457944" vertical-offset="0" max-vertical-offset="880">
+                <state line="22" column="34" selection-start="706" selection-end="706" vertical-scroll-proportion="0.5536791" vertical-offset="25" max-vertical-offset="880">
                   <folding />
                 </state>
               </provider>
@@ -126,7 +125,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -137,7 +136,19 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JQueryCalenderTW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -200,13 +211,17 @@
       <created>1388677334541</created>
       <updated>1388677334541</updated>
     </task>
+    <task id="LOCAL-00001" summary="fix default date">
+      <created>1391527991993</created>
+      <updated>1391527991993</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -221,6 +236,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -311,37 +327,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="1782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="15" selection-start="3789" selection-end="3789" vertical-scroll-proportion="0.33255813" vertical-offset="4796" max-vertical-offset="20218">
+        <state line="231" column="15" selection-start="3789" selection-end="3789" vertical-scroll-proportion="0.33255813" vertical-offset="4796" max-vertical-offset="20218" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="0" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0" vertical-offset="880" max-vertical-offset="1760">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../JSLibs/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8239" column="24" selection-start="253850" selection-end="253850" vertical-scroll-proportion="9.266666" vertical-offset="181470" max-vertical-offset="329428">
+        <state line="7866" column="4" selection-start="242842" selection-end="242842" vertical-scroll-proportion="0.0" vertical-offset="172704" max-vertical-offset="329428">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="27" selection-start="698" selection-end="698" vertical-scroll-proportion="0.9457944" vertical-offset="0" max-vertical-offset="880">
+        <state line="22" column="34" selection-start="706" selection-end="706" vertical-scroll-proportion="0.5536791" vertical-offset="25" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JQueryDatePickerTW.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="8" selection-start="4341" selection-end="4341" vertical-scroll-proportion="0.33215547" vertical-offset="2826" max-vertical-offset="4224">
+        <state line="148" column="12" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.38372093" vertical-offset="2926" max-vertical-offset="4378">
           <folding />
         </state>
       </provider>
