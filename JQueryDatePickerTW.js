@@ -1,9 +1,10 @@
 /**
  * Created by EIJI on 2014/1/3.
+ * ToDo Bug 2018.02.09 è¡Œ 152 åœ¨ä½¿ç”¨ class çš„æ–¹å¼å®£å‘Šæ™‚ï¼Œæœƒå°è‡´æ²’æœ‰åˆå§‹å€¼çš„æ¬„ä½å‡ºç¾åˆå§‹å€¼ï¼Œéœ€è¦åšè™•ç†ï¼Œå¦å‰‡åœ¨è¡Œ 198 çš„åœ°æ–¹è¨­ç½®åˆå§‹å€¼æˆ–é è¨­å€¼åªèƒ½äºŒæ“‡ä¸€
  */
 
-(function(){
-
+(function () {
+    var _this;
     var yearTextSelector = '.ui-datepicker-year';
 
     var dateNative = new Date(),
@@ -12,33 +13,32 @@
             dateNative.getMonth(),
             dateNative.getDate()
         );
-
-    // ¸É0¨ç¦¡
-    var padLeft = function(str, len){
-        if(str.length >= len){
+    var _currentYear = dateTW.getFullYear();
+    // è£œ0å‡½å¼
+    var padLeft = function (str, len) {
+        if (str.toString().length >= len) {
             return str;
-        }else{
+        } else {
             return padLeft(("0" + str), len);
         }
     };
 
 
-    // À³¸Ó¦³§ó¦nªº°µªk
+    // æ‡‰è©²æœ‰æ›´å¥½çš„åšæ³•
     var funcColle = {
         onSelect: {
-            basic: function(dateText, inst){
+            basic: function (dateText, inst) {
                 /*
                 var yearNative = inst.selectedYear < 1911
                     ? inst.selectedYear + 1911 : inst.selectedYear;*/
                 dateNative = new Date(inst.selectedYear, inst.selectedMonth, inst.selectedDay);
 
-                // ¦~¤À¤p©ó100·|³Q¸É¦¨19**, ­n°µ¨Ò¥~³B²z
+                // å¹´åˆ†å°æ–¼100æœƒè¢«è£œæˆ19**, è¦åšä¾‹å¤–è™•ç†
                 var yearTW = inst.selectedYear > 1911
                     ? padLeft(inst.selectedYear - 1911, 4)
                     : inst.selectedYear;
                 var monthTW = padLeft(inst.selectedMonth + 1, 2);
                 var dayTW = padLeft(inst.selectedDay, 2);
-
                 dateTW = new Date(
                     yearTW + '-' +
                     monthTW + '-' +
@@ -51,68 +51,96 @@
     };
 
     var twSettings = {
-        closeText: 'Ãö³¬',
-        prevText: '¤W­Ó¤ë',
-        nextText: '¤U­Ó¤ë',
-        currentText: '¤µ¤Ñ',
-        monthNames: ['¤@¤ë','¤G¤ë','¤T¤ë','¥|¤ë','¤­¤ë','¤»¤ë',
-            '¤C¤ë','¤K¤ë','¤E¤ë','¤Q¤ë','¤Q¤@¤ë','¤Q¤G¤ë'],
-        monthNamesShort: ['¤@¤ë','¤G¤ë','¤T¤ë','¥|¤ë','¤­¤ë','¤»¤ë',
-            '¤C¤ë','¤K¤ë','¤E¤ë','¤Q¤ë','¤Q¤@¤ë','¤Q¤G¤ë'],
-        dayNames: ['¬P´Á¤é','¬P´Á¤@','¬P´Á¤G','¬P´Á¤T','¬P´Á¥|','¬P´Á¤­','¬P´Á¤»'],
-        dayNamesShort: ['©P¤é','©P¤@','©P¤G','©P¤T','©P¥|','©P¤­','©P¤»'],
-        dayNamesMin: ['¤é','¤@','¤G','¤T','¥|','¤­','¤»'],
-        weekHeader: '©P',
+        closeText: 'é—œé–‰',
+        prevText: 'ä¸Šå€‹æœˆ',
+        nextText: 'ä¸‹å€‹æœˆ',
+        currentText: 'ä»Šå¤©',
+        monthNames: ['ä¸€æœˆ', 'äºŒæœˆ', 'ä¸‰æœˆ', 'å››æœˆ', 'äº”æœˆ', 'å…­æœˆ',
+            'ä¸ƒæœˆ', 'å…«æœˆ', 'ä¹æœˆ', 'åæœˆ', 'åä¸€æœˆ', 'åäºŒæœˆ'],
+        monthNamesShort: ['ä¸€æœˆ', 'äºŒæœˆ', 'ä¸‰æœˆ', 'å››æœˆ', 'äº”æœˆ', 'å…­æœˆ',
+            'ä¸ƒæœˆ', 'å…«æœˆ', 'ä¹æœˆ', 'åæœˆ', 'åä¸€æœˆ', 'åäºŒæœˆ'],
+        dayNames: ['æ˜ŸæœŸæ—¥', 'æ˜ŸæœŸä¸€', 'æ˜ŸæœŸäºŒ', 'æ˜ŸæœŸä¸‰', 'æ˜ŸæœŸå››', 'æ˜ŸæœŸäº”', 'æ˜ŸæœŸå…­'],
+        dayNamesShort: ['å‘¨æ—¥', 'å‘¨ä¸€', 'å‘¨äºŒ', 'å‘¨ä¸‰', 'å‘¨å››', 'å‘¨äº”', 'å‘¨å…­'],
+        dayNamesMin: ['æ—¥', 'ä¸€', 'äºŒ', 'ä¸‰', 'å››', 'äº”', 'å…­'],
+        weekHeader: 'å‘¨',
         dateFormat: 'yy/mm/dd',
         firstDay: 1,
         isRTL: false,
         showMonthAfterYear: true,
-        yearSuffix: '¦~',
+        yearSuffix: 'å¹´',
+        isShowClear: false,
+        clearText: "æ¸…é™¤",
 
-        onSelect: function(dateText, inst){
+        onSelect: function (dateText, inst) {
             $(this).val(funcColle.onSelect.basic(dateText, inst));
-            if(typeof funcColle.onSelect.newFunc === 'function'){
+            if (typeof funcColle.onSelect.newFunc === 'function') {
                 funcColle.onSelect.newFunc(dateText, inst);
             }
+        },
+        onChangeMonthYear: function (year, month, inst) {
+            _currentYear = (parseInt(year) - 1911);
+        },
+        beforeShow: function (input) {
+            _this = $(input);
         }
     };
 
-    // §âyearText´«¦¨¥Á°ê
-    var replaceYearText = function(){
-        var $yearText = $('.ui-datepicker-year');
+    // æŠŠyearTextæ›æˆæ°‘åœ‹
+    var replaceYearText = function () {
+        var $yearText = $(yearTextSelector);
 
-        if(twSettings.changeYear !== true){
-            $yearText.text('¥Á°ê' + dateTW.getFullYear());
-        }else{
-            // ¤U©Ô¿ï³æ
-            if($yearText.prev('span.datepickerTW-yearPrefix').length === 0){
-                $yearText.before("<span class='datepickerTW-yearPrefix'>¥Á°ê</span>");
+        if (twSettings.changeYear !== true) {
+            $yearText.text('æ°‘åœ‹' + _currentYear);
+        } else {
+            // ä¸‹æ‹‰é¸å–®
+            if ($yearText.prev('span.datepickerTW-yearPrefix').length === 0) {
+                $yearText.before("<span class='datepickerTW-yearPrefix'>æ°‘åœ‹</span>");
             }
-            $yearText.children().each(function(){
-                if(parseInt($(this).text()) > 1911){
+            $yearText.children().each(function () {
+                if (parseInt($(this).text()) > 1911) {
                     $(this).text(parseInt($(this).text()) - 1911);
                 }
             });
         }
+
+        // å¢åŠ è‡ªå®šç¾©æŒ‰ç´
+        if (twSettings.isShowClear && twSettings.showButtonPanel) {
+            setTimeout(function () {
+                $(".ui-datepicker-clear").remove();
+                var buttonPane = _this
+                    .datepicker("widget")
+                    .find(".ui-datepicker-buttonpane");
+                var btn = $('<button class="ui-datepicker-clear ui-state-default ui-corner-all" type="button">æ¸…é™¤</button>');
+                btn.unbind("click")
+                    .bind("click", function () {
+                        _this.val("");
+                        _this.datepicker("hide");
+                    });
+                btn.appendTo(buttonPane);
+            }, 1);
+        }
     };
 
-    $.fn.datepickerTW = function(options){
+    var SetCustomButton = function () {
 
+    };
+
+    $.fn.datepickerTW = function (options) {
         // setting on init,
-        if(typeof options === 'object'){
-            //onSelect¨Ò¥~³B²z, Á×§KÂĞ»\
-            if(typeof options.onSelect === 'function'){
+        if (typeof options === 'object') {
+            //onSelectä¾‹å¤–è™•ç†, é¿å…è¦†è“‹
+            if (typeof options.onSelect === 'function') {
                 funcColle.onSelect.newFunc = options.onSelect;
                 options.onSelect = twSettings.onSelect;
             }
-            // year range¥¿³W¤Æ¦¨¦è¤¸, ¤p©ó1911ªº¼Æ¦r³£·|³Q·í¦¨¥Á°ê¦~
-            if(options.yearRange){
+            // year rangeæ­£è¦åŒ–æˆè¥¿å…ƒ, å°æ–¼1911çš„æ•¸å­—éƒ½æœƒè¢«ç•¶æˆæ°‘åœ‹å¹´
+            if (options.yearRange) {
                 var temp = options.yearRange.split(':');
-                for(var i = 0; i < temp.length; i += 1){
-                    //¥Á°ê«e³B²z
-                    if(parseInt(temp[i]) < 1 ){
+                for (var i = 0; i < temp.length; i += 1) {
+                    //æ°‘åœ‹å‰è™•ç†
+                    if (parseInt(temp[i]) < 1) {
                         temp[i] = parseInt(temp[i]) + 1911;
-                    }else{
+                    } else {
                         temp[i] = parseInt(temp[i]) < 1911
                             ? parseInt(temp[i]) + 1911
                             : temp[i];
@@ -121,15 +149,15 @@
                 options.yearRange = temp[0] + ':' + temp[1];
             }
             // if input val not empty
-            if($(this).val() !== ''){
+            if ($(this).val() !== '') {
                 options.defaultDate = $(this).val();
             }
         }
 
         // setting after init
-        if(arguments.length > 1){
-            // ¥Ø«eÁÙ¨S·Q¨ì¥¿±`ªº¸Ñªk, ¥ı¥ÎÂà´«¦¨init setting objªº§Î¦¡
-            if(arguments[0] === 'option'){
+        if (arguments.length > 1) {
+            // ç›®å‰é‚„æ²’æƒ³åˆ°æ­£å¸¸çš„è§£æ³•, å…ˆç”¨è½‰æ›æˆinit setting objçš„å½¢å¼
+            if (arguments[0] === 'option') {
                 options = {};
                 options[arguments[1]] = arguments[2];
             }
@@ -142,52 +170,64 @@
         $(this).datepicker(twSettings);
 
         // beforeRender
-        $(this).click(function(){
+        $(this).click(function () {
             var isFirstTime = ($(this).val() === '');
+            var currentDateNative = dateNative;
+            var currentDateTW = dateTW;
+
+            if ($(this).val() !== "") {
+                var _date = $(this).val().split(/-|\/|\\|_|\./g);
+                currentDateNative = new Date(
+                    parseInt(_date[0]) + 1911,
+                    parseInt(_date[1]) - 1,
+                    _date[2]
+                );
+            } else {
+                currentDateNative = new Date();
+            }
+            currentDateTW = new Date(
+                    currentDateNative.getFullYear(),
+                    currentDateNative.getMonth(),
+                    currentDateNative.getDate()
+                );
+            currentDateTW.setFullYear(currentDateTW.getFullYear() - 1911);
 
             // year range and default date
 
-            if((twSettings.defaultDate || twSettings.yearRange) && isFirstTime){
+            if ((twSettings.defaultDate || twSettings.yearRange) && isFirstTime) {
+                var setDateVal = currentDateTW.getFullYear() + "-" + (currentDateTW.getMonth() + 1) + "-" + currentDateTW.getDate();
+                $(this).datepicker('setDate', setDateVal);
+                //if (twSettings.defaultDate) {
+                //    $(this).datepicker('setDate', twSettings.defaultDate);
+                //}
 
-                if(twSettings.defaultDate){
-                    $(this).datepicker('setDate', twSettings.defaultDate);
-                }
-
-                // ·í¦³year range®É, selectªì©l¤Æ³]¦¨rangeªº³Ì¥½¦~
-                if(twSettings.yearRange){
+                // ç•¶æœ‰year rangeæ™‚, selectåˆå§‹åŒ–è¨­æˆrangeçš„æœ€æœ«å¹´
+                if (twSettings.yearRange) {
                     var $yearSelect = $('.ui-datepicker-year'),
                         nowYear = twSettings.defaultDate
-                            ? $(this).datepicker('getDate').getFullYear()
-                            : dateNative.getFullYear();
-
-                    $yearSelect.children(':selected').removeAttr('selected');
-                    if($yearSelect.children('[value=' + nowYear + ']').length > 0){
-                        $yearSelect.children('[value=' + nowYear + ']').attr('selected', 'selected');
-                    }else{
-                        $yearSelect.children().last().attr('selected', 'selected');
-                    }
+                            ? ($(this).datepicker('getDate').getFullYear() + 1911)
+                            : currentDateNative.getFullYear();
+                    $yearSelect.val(nowYear).trigger("change");
                 }
             } else {
-                $(this).datepicker('setDate', dateNative);
+                $(this).datepicker('setDate', currentDateNative);
             }
 
-            $(this).val($.datepicker.formatDate(twSettings.dateFormat, dateTW));
+            $(this).val($.datepicker.formatDate(twSettings.dateFormat, currentDateTW));
 
             replaceYearText();
 
-            if(isFirstTime){
+            if (isFirstTime) {
                 $(this).val('');
             }
         });
 
         // afterRender
-        $(this).focus(function(){
+        $(this).focus(function () {
             replaceYearText();
         });
-
         return this;
     };
 
 })();
-
 
